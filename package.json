@@ -1,10 +1,14 @@
 {
-	"name": "vidgrid",
-	"main": "server.js",
-	"dependencies": {
-		"express": "~4.5.1",
-		"mongoose": "~3.8.0",
-		"body-parser": "~1.4.2",
-		"method-override": "~2.0.2"
+	"name"					: "vidgrid",
+	"version"				: "0.1.0",
+	"description"			: "A place to share videos from around the web",
+	"main"					: "server.js",
+	"author"				: "Wilhelm Willie",
+	"dependencies"			: {
+		"express"			: "~4.7.2",
+		"mongoose"			: "~3.6.2",
+		"morgan"			: "~1.2.2",
+		"body-parser"		: "~1.5.2",
+		"method-override"	: "~2.1.2"
 	}
 }

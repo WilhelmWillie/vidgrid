@@ -1,11 +1,11 @@
-# OS generated files #
+# OS crap we don't need
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
 .Trashes
-ehthumbs.db
-Thumbs.db
+.Spotlight-V100
 
-# Ignore node_modules, npm should handle all dependencies for us
+# Logs
+logs
+*.log
+
+# No need to push the node_modules folder, let NPM handle dependencies
 node_modules
