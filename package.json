@@ -1,6 +1,6 @@
 {
 	"name"					: "vidgrid",
-	"version"				: "0.1.0",
+	"version"				: "0.2.0",
 	"description"			: "A place to share videos from around the web",
 	"main"					: "server.js",
 	"author"				: "Wilhelm Willie",
