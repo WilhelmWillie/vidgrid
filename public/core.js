@@ -12,7 +12,6 @@ function mainController($scope, $http) {
 		$http.get('/api/videos')
 			.success(function(data) {
 				$scope.videos = data;
-				console.log(data);
 			})
 			.error(function(data) {
 				console.log('Error: ' + data);
