@@ -13,7 +13,8 @@ var bodyParser = require('body-parser'); // POST
 var methodOverride = require('method-override'); // DELETE and PUT
 
 // Configure our app details
-mongoose.connect('mongodb://localhost/vidgrid'); // Connect to MongoDB (Localhost)
+var db = require('./config/db');
+mongoose.connect(db.url); // Connect to MongoDB (Localhost)
 
 app.use(express.static(__dirname + '/public')); // Anything in public folder can be accessed publicly
 
