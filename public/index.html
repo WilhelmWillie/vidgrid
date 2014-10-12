@@ -49,7 +49,7 @@
 				</div>
 
 				<div id="video-grid" class="col-md-8">
-					<div class="col-sm-6" ng-repeat="video in videos">
+					<div class="col-sm-6" ng-repeat="video in videos | orderBy:'added':true">
 						<div class="panel panel-default">
 							<div class="panel-heading"><h3 class="panel-title">{{video.title}}</h3></div>
 
