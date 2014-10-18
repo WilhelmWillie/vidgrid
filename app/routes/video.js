@@ -9,5 +9,5 @@ module.exports = function(app) {
 
 	app.post('/api/videos', controller.postVideo); // Post video data to database
 
-	app.get('/api/videos/search/:tag', controller.searchTag);
+	app.get('/api/videos/search/:tag', controller.searchTag); // Searches for a video w/ a specified tag
 }
