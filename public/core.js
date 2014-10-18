@@ -41,6 +41,10 @@ function mainController($scope, $http) {
 		return '//www.youtube.com/embed/' + id;
 	}
 
+	$scope.getVidThumbnail = function(id) {
+		return '//img.youtube.com/vi/' + id + '/hqdefault.jpg';
+	}
+
 	$scope.loadVideos ();
 }
 
