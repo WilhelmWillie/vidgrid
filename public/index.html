@@ -35,11 +35,15 @@
 								</div>
 
 								<div class="form-group">
-									<textarea class="form-control" ng-model="formData.desc" rows="2" placeholder="Description..."></textarea>
+									<input type="text" class="form-control" placeholder="Youtube Video URL" ng-model="formData.url">
 								</div>
 
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Video URL" ng-model="formData.url">
+									<input type="text" class="form-control" placeholder="Tags (Separate by space)" ng-model="formData.tags">
+								</div>
+
+								<div class="form-group">
+									<textarea class="form-control" ng-model="formData.desc" rows="2" placeholder="Description..."></textarea>
 								</div>
 
 								<button type="submit" class="btn btn-primary" ng-click="createVideo()">Add Video</button>
