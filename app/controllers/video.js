@@ -55,5 +55,17 @@ module.exports = {
 					res.send({"success":"Video succesfully posted"}); // If we reach this point, posting was a success. We send a success message instead
 			});
 		}
+	},
+
+	// Searches for a tag in database
+	searchTag: function(req, res) {
+		var tagQuery = req.params.tag;
+ 
+		Video.find({tags: tagQuery}, function(err, videos) {
+			if (err)
+				res.send({"error":err});
+			else
+				res.json(videos);
+		});
 	}
 }

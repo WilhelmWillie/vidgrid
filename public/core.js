@@ -37,6 +37,23 @@ function mainController($scope, $http) {
 			});
 	};
 
+	$scope.searchTag = function() {
+		// If search query isn't white space, find all videos w/ the tag
+		var query = $scope.formData.search;
+
+		if (query.trim().length == 0) {
+			$scope.loadVideos();
+		} else {
+			$http.get('/api/videos/search/' + $scope.formData.search)
+				.success(function(data) {
+					$scope.videos = data;
+				})
+				.error(function(data) {
+					console.log('Error: ' + data);
+				});
+		}
+	}
+
 	$scope.getEmbedUrl = function(id) {
 		return '//www.youtube.com/embed/' + id;
 	}
