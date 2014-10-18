@@ -3,9 +3,8 @@
 
 // Models
 var mongoose = require('mongoose');
-var Video = mongoose.model('Video', require('../models/video')); // Models returns the schema
+var Video = mongoose.model('Video', require('../models/video')); // models/*.js returns the schema
 
-// Helper functions
 function youtube_parser(url) {
 	var regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#\&\?]*).*/;
 	var match = url.match(regExp);
@@ -40,8 +39,7 @@ module.exports = {
 			Video.create({
 				title: req.body.title,
 				desc: req.body.desc,
-				video_id: video_id,
-				votes: 0
+				video_id: video_id
 			}, function(err, video) {
 				// Again, if we stumble upon an error, we send that instead
 				if (err)
