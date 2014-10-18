@@ -6,8 +6,14 @@ var VideoSchema = module.exports = new mongoose.Schema({ // Returns the schema i
 	title: String, // Use chosen video title
 	desc: String, // Description of the video
 	video_id: String, // YT video ID
-	score: {Type: Number, default: 0}, // Changed votes to score
-	added: {type: Date, default: Date.now} // Date the video was posted 
-
+	score: {type: Number, default: 0}, // Changed votes to score
+	added: {type: Date, default: Date.now}, // Date the video was posted 
+	tags: [
+		{
+			type: String,
+			match: /^[a-zA-Z]+$/,
+			check: { minLength: 2 }
+		}
+	]
 	// TODO: Add tagging system for videos
 });

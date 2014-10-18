@@ -15,6 +15,10 @@ function youtube_parser(url) {
 	}
 }
 
+function stringToTags(str) {
+	return str.split(" ");
+}
+
 // Export controller logic
 module.exports = {
 	// Returns all videos available
@@ -33,13 +37,16 @@ module.exports = {
 		// Before we post the video, we must strip the http/https from the URL!
 		var video_id = youtube_parser(req.body.url);
 
+		var tags = stringToTags(req.body.tags);
+
 		if (video_id == "Bad URL") { // If the URL is invalid, then we send back an error message
 			res.send({"error":"Invalid URL!"});
 		} else {
 			Video.create({
 				title: req.body.title,
 				desc: req.body.desc,
-				video_id: video_id
+				video_id: video_id,
+				tags: tags
 			}, function(err, video) {
 				// Again, if we stumble upon an error, we send that instead
 				if (err)
