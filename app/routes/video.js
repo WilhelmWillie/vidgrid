@@ -13,7 +13,8 @@ function youtube_parser(url) {
 }
 
 // Models
-var Video = require('../models/video');
+var mongoose = require('mongoose');
+var Video = mongoose.model('Video', require('../models/video')); // Models returns the schema
 
 module.exports = function(app) {
 	app.get('/api/videos', function(req, res) { // Grab all the videos in database
