@@ -24,6 +24,16 @@
 			<div clas="row">
 				<div class="col-md-4">
 					<div class="panel panel-default">
+						<div class="panel-heading"><h2 class="panel-title">Search</h2></div>
+						<div class="panel-body">
+							<div class="input-group">
+								<input type="text" class="form-control" placeholder="Insert tag search" ng-model="formData.search">
+								<span class="input-group-btn"><button class="btn btn-primary" type="button"><i class="glyphicon glyphicon-search"></i></button></span>
+							</div>	
+						</div>
+					</div>
+
+					<div class="panel panel-default">
 						<div class="panel-heading"><h2 class="panel-title">Add Video</h2></div>
 
 						<div class="panel-body">
@@ -49,7 +59,7 @@
 								<button type="submit" class="btn btn-primary" ng-click="createVideo()">Add Video</button>
 							</form>
 						</div>
-					</div>
+					</div>					
 				</div>
 
 				<div id="video-grid" class="col-md-8">
